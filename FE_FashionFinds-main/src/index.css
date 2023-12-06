@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f8f9fa] font-body text-[#11006f];
+  }
+  li {
+    box-sizing: border-box;
+  }
+  li,
+  button {
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+}
+@layer components {
+  .page-container {
+    max-width: 1280px;
+    @apply mx-auto;
+  }
+}
+.header {
+  background-image: url("https://bizweb.dktcdn.net/100/438/408/themes/913235/assets/background-header.png?1689389809761");
+}
+
+/* .slider-home */
+.slider-home .swiper-pagination {
+  margin-bottom: 20px;
+}
+.slider-home .swiper-pagination .swiper-pagination-bullet {
+  @apply bg-white;
+}
+.slider-home .swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-secondary;
+}
+
+.category-table {
+  width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.category-table th {
+  background-color: #f2f2f2;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -70px;
+  background-color: #f4f3f3;
+  padding: 10px;
+  width: 100%;
+  transition: opacity 0.3s, max-height 0.3s;
+  opacity: 0;
+  max-height: 0;
+  min-width: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.submenu li a {
+  display: block;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+  opacity: 1;
+  max-height: 500px; /* Giá trị tối đa cho chiều cao */
+  transition: opacity 0.3s, max-height 0.3s;
+  padding: 10px 20px;
+}
+
+.submenu li {
+  display: block;
+  color: #333;
+  padding: 5px 0;
+  transition: background 0.3s;
+}
+
+.submenu li:hover {
+  background-color: #ccc;
+}
+
+/*  Ant */
+.ant-row.ant-form-item-row {
+  display: flex;
+  flex-direction: column;
+}
